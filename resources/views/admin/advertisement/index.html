@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <style>
+    /* CSS for the layout */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+  grid-area: header;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  /* Additional styles */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "sidebar-left content sidebar-right"
+        "sidebar-left content sidebar-right"
+        "footer footer footer";
+      grid-template-columns: 200px 1fr 200px;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .sidebar-left {
+      grid-area: sidebar-left;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .sidebar-right {
+      grid-area: sidebar-right;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .content {
+      grid-area: content;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Header</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </nav>
+
+
+    </header>
+    <div class="sidebar-left">
+      <h2>Left Sidebar</h2>
+      <ul>
+        <li><a href="https://www.facebook.com">Facebook</a></li>
+        <li><a href="https://www.youtube.com">YouTube</a></li>
+        <li><a href="https://www.instagram.com">Instagram</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-right">
+      <h2>Right Sidebar</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <footer>
+      <p style="text-align: center;">&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
